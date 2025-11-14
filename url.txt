@@ -1,0 +1,5 @@
+# 示例：每行一条，格式 [subdir]=<git-url>
+# 空行或以 # 开头的行为注释，会被忽略
+
+[gelei-dingyue]=https://github.com/shaloushu/gelei-dingyue.git
+#[another-project]=https://github.com/owner/another-repo.git
