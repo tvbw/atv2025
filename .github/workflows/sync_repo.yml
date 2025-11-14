@@ -1,0 +1,39 @@
+name: daily-sync-external-repos
+
+on:
+  schedule:
+    # 每天 00:00 UTC 运行。按需调整 cron 表达式以匹配你所在时区。
+    - cron: '0 0 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    name: Sync external repos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 需要写权限以便 workflow 可以提交并推送回当前仓库
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Make scripts executable
+        run: |
+          chmod +x ./scripts/sync_repos.py || true
+
+      - name: Run sync script
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 ./scripts/sync_repos.py
+
+      - name: Show git status
+        run: |
+          git --no-pager status --porcelain --untracked-files=all || true
