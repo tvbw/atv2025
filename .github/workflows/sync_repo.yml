@@ -24,7 +24,7 @@ jobs:
 
       - name: Make scripts executable
         run: |
-          chmod +x ./scripts/sync_repos.py || true
+          chmod +x sync_repos.py || true
 
       - name: Run sync script
         env:
@@ -32,7 +32,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 ./scripts/sync_repos.py
+          python3 sync_repos.py
 
       - name: Show git status
         run: |
