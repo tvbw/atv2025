@@ -7,3 +7,4 @@
 [lemonguo121]=https://github.com/lemonguo121/BoxRes.git
 [leexuben]=https://github.com/leexuben/TVBOX-merge.git
 [YJL]=https://github.com/YJL20190405/TVBOX.git
+[zheng1976]=https://github.com/zheng197600/tvbox.git
