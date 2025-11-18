@@ -104,7 +104,7 @@
     {
       "key": "新浪资源",
       "name": "新浪资源",
-      "type": 2,
+      "type": 0,
       "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/at/xml/",
       "playUrl": "",
       "searchable": 1,
@@ -577,7 +577,7 @@
     {
       "key": "香蕉资源",
       "name": "香蕉资源",
-      "type": 2,
+      "type": 0,
       "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/at/xml/",
       "searchable": 1,
       "quickSearch": 0
@@ -591,14 +591,14 @@
     },{
       "key": "幸资源",
       "name": "幸资源",
-      "type": 2,
+      "type": 0,
       "api": "https://xzybb1.com/api.php/provide/vod/at/xml",
       "searchable": 1,
       "quickSearch": 0
     },{
       "key": "杏吧资源",
       "name": "杏吧资源",
-      "type": 2,
+      "type": 0,
       "api": "https://xingba222.com/api.php/provide/vod/at/xml",
       "searchable": 1,
       "quickSearch": 0
