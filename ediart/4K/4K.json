@@ -13,8 +13,8 @@
 			"api": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/douban_min.js"
 		},
 		{
-			"key": "labi",
-			"name": "蜡笔｜4K",
+			"key": "labi_hb",
+			"name": "蜡笔HB｜4K",
 			"type": 3,
 			"api": "csp_HBT4",
 			"searchable": 1,
@@ -24,8 +24,8 @@
 			"ext": "http://154.219.113.13:4866/test.php?site=labi###labi"
 		},
 		{
-			"key": "mihdr",
-			"name": "至臻｜4K",
+			"key": "mihdr_hb",
+			"name": "至臻HB｜4K",
 			"type": 3,
 			"api": "csp_HBT4",
 			"searchable": 1,
@@ -35,8 +35,8 @@
 			"ext": "http://154.219.113.13:4866/test.php?site=mihdr###mihdr"
 		},
 		{
-			"key": "erxiao",
-			"name": "二小｜4K",
+			"key": "erxiao_hb",
+			"name": "二小HB｜4K",
 			"type": 3,
 			"api": "csp_HBT4",
 			"searchable": 1,
@@ -46,8 +46,8 @@
 			"ext": "http://154.219.113.13:4866/test.php?site=erxiao###erxiao"
 		},
 		{
-			"key": "ouge",
-			"name": "讴歌｜4K",
+			"key": "ouge_hb",
+			"name": "讴歌HB｜4K",
 			"type": 3,
 			"api": "csp_HBT4",
 			"searchable": 1,
@@ -55,24 +55,6 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": "http://154.219.113.13:4866/test.php?site=ouge###ouge"
-		},
-		{
-			"key": "kuaiying",
-			"name": "快映｜4K",
-			"type": 3,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"changeable": 1,
-			"api": "./js/appfox.js",
-			"ext": {
-				"host": "https://www.snys2.xyz:443",
-				"ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15",
-				"source_order": [
-					"tianyi-14",
-					"alist1"
-				]
-			}
 		},
 		{
 			"key": "duoduo_ok",
