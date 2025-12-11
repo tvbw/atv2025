@@ -1,6 +1,6 @@
 {
-	"spider": "https://aw.0890.dpdns.org/wnqiwnquidwiunddneudne/custom_spider.jar",
-	"logo": "https://gitee.com/amg99/tvjson/raw/master/img/dysmt.gif",
+    "spider": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png",
+    "logo": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/logo.gif",
 	"sites": [{
 			"name": "💬嗷嗚彈幕",
 			"key": "嗷嗚彈幕",
@@ -21,7 +21,7 @@
 			"filterable": 0,
 			"quickSearch": 0,
 			"changeable": 0,
-			"ext": "https://aw.0890.dpdns.org/wnqiwnquidwiunddneudne/json/github.json"
+			"ext": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/github.json"
 		},
 		{
 			"name": "🎉Bili",
@@ -33,7 +33,7 @@
 			"quickSearch": 1,
 			"changeable": 1,
 			"ext": {
-				"json": "https://gitee.com/amg99/tvjson/raw/master/spider/json/bili.json",
+				"json": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/bili.json",
 				"cookie": ""
 			}
 		},
@@ -46,7 +46,7 @@
 			"filterable": 1,
 			"quickSearch": 1,
 			"changeable": 1,
-			"ext": "https://aw.0890.dpdns.org/wnqiwnquidwiunddneudne/json/guazi.json"
+			"ext": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/guazi.json"
 		},
 		{
 			"name": "🎭杜北",
@@ -57,7 +57,7 @@
 			"filterable": 1,
 			"quickSearch": 1,
 			"changeable": 1,
-			"ext": "https://aw.0890.dpdns.org/wnqiwnquidwiunddneudne/json/dubk.json"
+			"ext": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/dubk.json"
 		},
 		{
 			"name": "🌱春天",
@@ -89,7 +89,7 @@
 			"filterable": 1,
 			"quickSearch": 1,
 			"changeable": 1,
-			"ext": "https://aw.0890.dpdns.org/wnqiwnquidwiunddneudne/json/jpian.json"
+			"ext": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/jpian.json"
 		},
 		{
 			"name": "🔥热播",
@@ -140,8 +140,7 @@
 			"searchable": 1,
 			"filterable": 1,
 			"quickSearch": 1,
-			"changeable": 1,
-			"ext": "1"
+			"changeable": 1
 		},
 		{
 			"name": "🏆高端",
@@ -283,6 +282,36 @@
 			"filterable": 1,
 			"quickSearch": 1,
 			"changeable": 1
+		},
+		{
+			"name": "🔍fish盘搜",
+			"key": "fish盘搜",
+			"type": 3,
+			"api": "csp_FishPsAmns",
+			"searchable": 1,
+			"filterable": 0,
+			"quickSearch": 1,
+			"changeable": 0
+		},
+		{
+			"name": "🔍RB盘搜",
+			"key": "RB盘搜",
+			"type": 3,
+			"api": "csp_RbPsAmns",
+			"searchable": 1,
+			"filterable": 0,
+			"quickSearch": 1,
+			"changeable": 0
+		},
+		{
+			"name": "🔍短剧盘搜",
+			"key": "短剧盘搜",
+			"type": 3,
+			"api": "csp_DuanjPsAmns",
+			"searchable": 1,
+			"filterable": 0,
+			"quickSearch": 1,
+			"changeable": 0
 		},
 		{
 			"key": "push_agent",
