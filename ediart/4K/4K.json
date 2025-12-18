@@ -92,7 +92,8 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"changeable": 1
+			"changeable": 1,
+   "categories": ["电影", "剧集", "动漫", "短剧", "纪录片"]
 		},
 		{
 			"key": "labi",
@@ -154,9 +155,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -169,9 +170,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -184,9 +185,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -199,10 +200,11 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
-			}
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
+			},
+			"categories": ["木偶电影", "木偶剧集", "木偶动漫", "木偶短剧", "木偶纪录片"]
 		},
 		{
 			"key": "zhizhen_OK",
@@ -214,9 +216,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -229,9 +231,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -244,8 +246,8 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -258,9 +260,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		},
 		{
@@ -273,9 +275,9 @@
 			"filterable": 1,
 			"changeable": 1,
 			"ext": {
-				"cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/qk.js",
-				"uc_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/uc.js",
-				"baidu_cookie": "https://gitee.com/cpu-iy/iy/raw/master/jars/bd.js"
+				"cookie": "./js/qk.png",
+				"uc_cookie": "./js/uc.png",
+				"baidu_cookie": "./js/bd.png"
 			}
 		}
 	],
@@ -328,5 +330,5 @@
 		"studentlive.migucloud.com=base-v4v6-miguvideo.e.cdn.chinamobile.com"
 	],
 	"wallpaper": "https://深色壁纸.xxooo.cf/",
-	"spider": "https://gitee.com/cpu-iy/iy/raw/master/jars/ok.jar"
+	"spider": "./ok.webp"
 }
