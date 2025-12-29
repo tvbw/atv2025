@@ -933,19 +933,6 @@
             }
         },
         {
-            "key": "稀饭动漫",
-            "name": "稀饭｜动漫",
-            "type": 3,
-            "quickSearch": 1,
-            "api": "csp_AppGet",
-            "ext": {
-                "url": "",
-                "site": "https://xfapp-1305390065.cos.ap-guangzhou.myqcloud.com/getapp.txt",
-                "dataKey": "1yZ2Spn9krnzVKoC",
-                "dataIv": "1yZ2Spn9krnzVKoC"
-            }
-        },
-        {
             "key": "咕咕动漫",
             "name": "咕咕｜动漫",
             "type": 3,
@@ -1732,12 +1719,6 @@
             "playerType": 2,
             "url": "https://bc.188766.xyz/?url=https://live.188766.xyz&mishitong=true&mima=mianfeibuhuaqian&huikan=en&json=true",
             "ua": "bingcha/1.1 (mianfeifenxiang) "
-        },
-        {
-            "name": "央视频",
-            "url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/ysp.m3u",
-            "epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
-            "logo": "http://diyp5.112114.xyz/{name}.png"
         },
         {
             "name": "Sports",
