@@ -22,7 +22,7 @@
 		},
 		{
 			"key": "好莱坞",
-			"name": "好莱坞",
+			"name": "好莱坞(py)",
 			"type": 3,
 			"api": "./py/好莱坞.py",
 			"searchable": 1,
@@ -32,7 +32,7 @@
 		},
 		{
 			"key": "LIBVIO",
-			"name": "LIBVIO",
+			"name": "LIBVIO(py)",
 			"type": 3,
 			"api": "./py/LIBVIO.py",
 			"searchable": 1,
@@ -62,42 +62,42 @@
 		},
 		{
 			"key": "4KVM",
-			"name": "4KVM",
+			"name": "4KVM(py)",
 			"type": 3,
 			"api": "./py/4KVM.py",
 			"changeable": 1
 		},
 		{
 			"key": "小鸡暴走",
-			"name": "小鸡暴走",
+			"name": "小鸡暴走(py)",
 			"type": 3,
 			"api": "./py/小鸡暴走.py",
 			"changeable": 1
 		},
 		{
 			"key": "河马短剧",
-			"name": "河马短剧",
+			"name": "河马短剧(py)",
 			"type": 3,
 			"api": "./py/河马短剧.py",
 			"changeable": 1
 		},
 		{
 			"key": "芒果TV",
-			"name": "芒果TV",
+			"name": "芒果TV(py)",
 			"type": 3,
 			"api": "./py/芒果TV.py",
 			"changeable": 1
 		},
 		{
 			"key": "八戒影视",
-			"name": "八戒影视",
+			"name": "八戒影视(py)",
 			"type": 3,
 			"api": "./py/八戒影视.py",
 			"changeable": 1
 		},
 		{
 			"key": "企鹅体育",
-			"name": "企鹅体育",
+			"name": "企鹅体育(py)",
 			"type": 3,
 			"searchable": 1,
 			"api": "./py/企鹅体育.py",
@@ -105,203 +105,215 @@
 		},
 		{
 			"key": "麦田影院",
-			"name": "麦田影院",
+			"name": "麦田影院(py)",
 			"type": 3,
 			"api": "./py/麦田影院.py",
 			"changeable": 1
 		},
 		{
 			"key": "山有木兮",
-			"name": "山有木兮",
+			"name": "山有木兮(py)",
 			"type": 3,
 			"api": "./py/山有木兮.py",
 			"changeable": 1
 		},
 		{
 			"key": "哇哇",
-			"name": "哇哇",
+			"name": "哇哇(py)",
 			"type": 3,
 			"api": "./py/哇哇.py",
 			"changeable": 1
 		},
 		{
 			"key": "YYMP3音乐网",
-			"name": "YYMP3音乐网",
+			"name": "YYMP3音乐网(py)",
 			"type": 3,
 			"api": "./py/YYMP3音乐网.py",
 			"changeable": 1
 		},
 		{
 			"key": "bili",
-			"name": "bili",
+			"name": "bili(py)",
 			"type": 3,
 			"api": "./py/bili.py",
 			"changeable": 1
 		},
 		{
 			"key": "随机小姐姐",
-			"name": "随机小姐姐",
+			"name": "随机小姐姐(py)",
 			"type": 3,
 			"api": "./py/随机小姐姐.py",
 			"changeable": 1
 		},
 		{
 			"key": "欣欣影视",
-			"name": "欣欣影视",
+			"name": "欣欣影视(py)",
 			"type": 3,
 			"api": "./py/欣欣影视.py",
 			"changeable": 1
 		},
 		{
 			"key": "土豆浏览器",
-			"name": "土豆浏览器",
+			"name": "土豆浏览器(py)",
 			"type": 3,
 			"api": "./py/土豆浏览器.py",
 			"changeable": 1
 		},
 		{
 			"key": "小红影视",
-			"name": "小红影视",
+			"name": "小红影视(py)",
 			"type": 3,
 			"api": "./py/小红影视.py",
 			"changeable": 1
 		},
 		{
 			"key": "国外剧",
-			"name": "国外剧",
+			"name": "国外剧(py)",
 			"type": 3,
 			"api": "./py/国外剧.py",
 			"changeable": 1
 		},
 		{
 			"key": "优酷视频",
-			"name": "优酷视频",
+			"name": "优酷视频(py)",
 			"type": 3,
 			"api": "./py/优酷视频.py",
 			"changeable": 1
 		},
 		{
 			"key": "剧王短剧",
-			"name": "剧王短剧",
+			"name": "剧王短剧(py)",
 			"type": 3,
 			"api": "./py/剧王短剧.py",
 			"changeable": 1
 		},
 		{
 			"key": "厂长资源",
-			"name": "厂长资源",
+			"name": "厂长资源(py)",
 			"type": 3,
 			"api": "./py/厂长资源.py",
 			"changeable": 1
 		},
 		{
 			"key": "哔哩视频",
-			"name": "哔哩视频",
+			"name": "哔哩视频(py)",
 			"type": 3,
 			"api": "./py/哔哩视频.py",
 			"changeable": 1
 		},
 		{
 			"key": "奇优动漫",
-			"name": "奇优动漫",
+			"name": "奇优动漫(py)",
 			"type": 3,
 			"api": "./py/奇优动漫.py",
 			"changeable": 1
 		},
 		{
 			"key": "永乐视频",
-			"name": "永乐视频",
+			"name": "永乐视频(py)",
 			"type": 3,
 			"api": "./py/永乐视频.py",
 			"changeable": 1
 		},
 		{
 			"key": "星芽短剧",
-			"name": "星芽短剧",
+			"name": "星芽短剧(py)",
 			"type": 3,
 			"api": "./py/星芽短剧.py",
 			"changeable": 1
 		},
 		{
 			"key": "甜圈短剧",
-			"name": "甜圈短剧",
+			"name": "甜圈短剧(py)",
 			"type": 3,
 			"api": "./py/甜圈短剧.py",
 			"changeable": 1
 		},
 		{
 			"key": "电影猎手",
-			"name": "电影猎手",
+			"name": "电影猎手(py)",
 			"type": 3,
 			"api": "./py/电影猎手.py",
 			"changeable": 1
 		},
 		{
 			"key": "界影视",
-			"name": "界影视",
+			"name": "界影视(py)",
 			"type": 3,
 			"api": "./py/界影视.py",
 			"changeable": 1
 		},
 		{
 			"key": "荐片",
-			"name": "荐片",
+			"name": "荐片(py)",
 			"type": 3,
 			"api": "./py/荐片.py",
 			"changeable": 1
 		},
 		{
 			"key": "骚火影视",
-			"name": "骚火影视",
+			"name": "骚火影视(py)",
 			"type": 3,
 			"api": "./py/骚火影视.py",
 			"changeable": 1
 		},
 		{
+            "key": "采集合集py",
+            "name": "采集合集(py)+",
+            "type": 3,
+            "api": "./py/采集合集.py",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1,
+            "playerType": 2,
+            "ext": "0"
+        },
+		{
 			"key": "91rb",
-			"name": "🔞91rb",
+			"name": "🔞91rb(py)",
 			"type": 3,
 			"api": "./py/91rb.py",
 			"changeable": 1
 		},
 		{
 			"key": "DSYS",
-			"name": "🔞DSYS",
+			"name": "🔞DSYS(py)",
 			"type": 3,
 			"api": "./py/DSYS.py",
 			"changeable": 1
 		},
 		{
 			"key": "lav",
-			"name": "🔞lav",
+			"name": "🔞lav(py)",
 			"type": 3,
 			"api": "./py/lav.py",
 			"changeable": 1
 		},
 		{
 			"key": "色播聚合",
-			"name": "🔞色播聚合",
+			"name": "🔞色播聚合(py)",
 			"type": 3,
 			"api": "./py/色播聚合.py",
 			"changeable": 1
 		},
 		{
 			"key": "一个区",
-			"name": "🔞一个区",
+			"name": "🔞一个区(py)",
 			"type": 3,
 			"api": "./py/一个区.py",
 			"changeable": 1
 		},
 		{
 			"key": "九个区",
-			"name": "🔞九个区",
+			"name": "🔞九个区(py)",
 			"type": 3,
 			"api": "./py/九个区.py",
 			"changeable": 1
 		},
 		{
 			"key": "香蕉视频",
-			"name": "🔞香蕉视频",
+			"name": "🔞香蕉视频(py)",
 			"type": 3,
 			"api": "./py/香蕉视频.py",
 			"changeable": 1
@@ -319,14 +331,14 @@
 		},
 		{
 			"key": "小红薯",
-			"name": "🔞小红薯",
+			"name": "🔞小红薯(py)",
 			"type": 3,
 			"api": "./py/小红薯.py",
 			"changeable": 1
 		},
 		{
 			"key": "推特",
-			"name": "🔞推特",
+			"name": "🔞推特(py)",
 			"type": 3,
 			"api": "./py/推特.py",
 			"changeable": 1
@@ -413,82 +425,39 @@
 		}
 	],
 	"lives": [{
-			"name": "全量四季在线",
-			"type": "0",
-			"ua": "okhttp/3.15",
+			"name": "冰茶",
+			"type": 0,
+			"playerType": 2,
+			"url": "https://bc.188766.xyz/?url=https://live.188766.xyz&mishitong=true&mima=bingcha1130&huikan=en&json=true",
+			"ua": "bingcha/1.1 (mianfeifenxiang) "
+		},
+		{
+			"name": "Sports",
+			"url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/sports.m3u"
+		},
+		{
+			"name": "港台",
+			"url": "http://152.32.229.52:5050/?type=m3u&proxy=true"
+		},
+		{
+			"name": "英超+NBA",
+			"url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/epl_nba.m3u"
+		},
+		{
+			"name": "Jacktv",
 			"url": "https://php.946985.filegear-sg.me/jackTV.m3u"
 		},
 		{
-			"name": "体育直播",
-			"type": 3,
-			"api": "./py/体育直播.py",
-			"ext": {}
+			"name": "catvod",
+			"url": "https://iptv.catvod.com/tv.m3u"
 		},
 		{
-			"name": "SMT(py)",
-			"type": 3,
-			"api": "./py/lives-SMT.py",
-			"ext": {}
+			"name": "SMT-muchen",
+			"url": "https://tv.ediart.ggff.net/smt"
 		},
 		{
-			"name": "iptv345",
-			"type": 3,
-			"api": "./py/lives-iptv345.py",
-			"ext": {}
-		},
-		{
-			"name": "zxbv",
-			"type": 3,
-			"api": "./py/live_zxbv.py",
-			"ext": {}
-		},
-		{
-			"name": "kzb",
-			"type": 3,
-			"api": "./py/lives-kzb.py",
-			"ext": {}
-		},
-		{
-			"name": "直播bx5kge(js)",
-			"type": 3,
-			"url": "https://b6f56s23.bx5kge.com/assets/js/tv.js",
-			"api": "./js/直播bx5kge.min.js",
-			"ext": {}
-		},
-		{
-			"name": "快直播(js)",
-			"type": 3,
-			"url": "https://jzb5kqln.huajiaedu.com",
-			"api": "./js/快直播.min.js",
-			"ext": {}
-		},
-		{
-			"name": "MY live-catvod",
-			"type": "0",
-			"ua": "okhttp/3.15",
+			"name": "SMT-catvod",
 			"url": "https://live.catvod.com/tv.m3u"
-		},
-		{
-			"name": "MY live-catvod-local",
-			"type": "0",
-			"ua": "okhttp/3.15",
-			"url": "http://127.0.0.1:9978/file/lives/Live-catvod.txt"
-		},
-		{
-			"name": "MQiTV",
-			"api": "csp_MQiTV",
-			"jar": "https://slink.ltd/https://raw.githubusercontent.com/sqspot/tac/refs/heads/main/jar/fmMQiTV.jar",
-			"ext": "https://59.125.210.231:4433",
-			"playerType": 1,
-			"epg": "http://epg.112114.xyz/?ch={name}&date={date}"
-		},
-		{
-			"name": "肥羊国内直播",
-			"type": 3,
-			"api": "csp_Feiyang",
-			"url": "tv.m3u",
-			"ext": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://mirror.ghproxy.com/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5",
-			"jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"
 		}
 	]
 }
