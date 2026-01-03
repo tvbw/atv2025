@@ -11,6 +11,62 @@
 			"changeable": 0
 		},
 		{
+			"key": "apple_js",
+			"name": "小苹果JS",
+			"type": 3,
+			"api": "./js/apple.js",
+			"changeable": 1
+		},
+		{
+			"key": "永乐影视_js",
+			"name": "永乐影视JS",
+			"type": 3,
+			"api": "./js/永乐视频.js",
+			"changeable": 1
+		},
+		{
+			"key": "海龟_js",
+			"name": "海龟JS",
+			"type": 3,
+			"api": "./js/海龟.js",
+			"changeable": 1
+		},
+		{
+			"key": "韩剧网_js",
+			"name": "韩剧网JS",
+			"type": 3,
+			"api": "./js/韩剧网.js",
+			"changeable": 1
+		},
+		{
+			"key": "荐片_js",
+			"name": "荐片JS",
+			"type": 3,
+			"api": "./js/荐片.js",
+			"changeable": 1
+		},
+		{
+			"key": "金牌影院_js",
+			"name": "金牌影院JS",
+			"type": 3,
+			"api": "./js/金牌影院.js",
+			"changeable": 1
+		},
+		{
+			"key": "鬼片之家_js",
+			"name": "鬼片之家JS",
+			"type": 3,
+			"api": "./js/鬼片之家.js",
+			"changeable": 1
+		},
+		{
+			"key": "聚合短剧_js",
+			"name": "聚合短剧JS",
+			"type": 3,
+			"api": "./js/聚合短剧.js",
+			"changeable": 1
+		},
+		{
 			"key": "js_guan_fang_cai_ji",
 			"name": "官方采集(js)",
 			"type": 3,
@@ -258,17 +314,17 @@
 			"changeable": 1
 		},
 		{
-            "key": "采集合集py",
-            "name": "采集合集(py)+",
-            "type": 3,
-            "api": "./py/采集合集.py",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "changeable": 1,
-            "playerType": 2,
-            "ext": "0"
-        },
+			"key": "采集合集py",
+			"name": "采集合集(py)+",
+			"type": 3,
+			"api": "./py/采集合集.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"changeable": 1,
+			"playerType": 2,
+			"ext": "0"
+		},
 		{
 			"key": "91rb",
 			"name": "🔞91rb(py)",
@@ -342,6 +398,15 @@
 			"type": 3,
 			"api": "./py/推特.py",
 			"changeable": 1
+		},
+		{
+			"key": "kemono",
+			"name": "🔞kemono(py)",
+			"type": 3,
+			"api": "./py/kemono.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0
 		}
 	],
 	"parses": [{
