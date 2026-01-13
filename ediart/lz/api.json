@@ -394,8 +394,12 @@
 			"url": "https://iptv.catvod.com/tv.m3u"
 		},
 		{
-			"name": "SMT",
+			"name": "SMT-catvod",
 			"url": "https://live.catvod.com/tv.m3u"
+		},
+		{
+			"name": "SMT",
+			"url": "http://96.44.160.246:9999/smt.php"
 		},
 		{
 			"name": "MyTvSuper",
@@ -422,6 +426,12 @@
 			"epg": "https://epg.v1.mk/json?ch={name}&date={date}",
 			"logo": "https://epg.v1.mk/logo/{name}.png",
 			"timeout": 10
+		},
+		{
+			"name": "IPTV Pro",
+			"url": "https://tv123.cc.cd/iptvpro.txt",
+			"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
+			"logo": "http://diyp5.112114.xyz/{name}.png"
 		},
 		{
 			"name": "备用直播一",

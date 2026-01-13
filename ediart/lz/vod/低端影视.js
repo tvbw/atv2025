@@ -6,7 +6,7 @@
  * 发布页：https://www.ddys.diy/
  *
  * @config
- * debug: true
+//  * debug: true
  // * showWebView: true
  * percent: 80,60
  * returnType: dom
@@ -223,8 +223,3 @@ function parseDetailPage(document) {
         vod_play_url: vod_play_url
     }];
 }
-
-
-/* ---------------- 导出对象 ---------------- */
-const spider = { init, homeContent, homeVideoContent, categoryContent, detailContent, searchContent, playerContent, action };
-spider;

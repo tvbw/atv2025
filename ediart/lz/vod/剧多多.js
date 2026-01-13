@@ -16,7 +16,7 @@
  *
  */
 
-const baseUrl = 'https://www.jddzx.cc/';
+const baseUrl = 'https://www.jddzx.cc';
 
 /**
  * 初始化方法
@@ -89,7 +89,7 @@ async function categoryContent(tid, pg, filter, extend) {
     console.log(`分类: tid=${tid}, pg=${pg}`);
 	const document = await Java.wvOpen(`${baseUrl}/vodshow[/area/${extend?.area}][/by/${extend?.sort}][/class/${extend?.cate}]/id/${extend?.type||tid}[/year/${extend?.year}]/page/${pg||1}.html`);
 	
-    const pagecount = parseInt($('#page a[title="尾页"]')?.href?.match(/page\/(\d+)/)?.[1] || '1');
+    const pagecount = parseInt(document.querySelector('#page a[title="尾页"]')?.href?.match(/page\/(\d+)/)?.[1] || '1');
     return { 
         code: 1, 
         msg: "数据列表", 
@@ -119,131 +119,66 @@ async function detailContent(ids) {
         total: 1
     };
 }
-async function onCaptcha(code, cookie, header) {
-	console.log('获取到的id', code, cookie, header);
-	Java.showAlertDialog("剧多多", "收到验证码" + code);
-	if (code == '789') return false;
-	let pg = 1;
-    const vods = [];
-    let pageSize = 2; // 每页显示数量
-	// if(pg >= 2) pageSize= 20;
-    const totalPages = 20; // 总页数
-    const totalItems = pageSize * totalPages; // 总数据量
-    
-    // 计算当前页的起始序号
-    const startIndex = (pg - 1) * pageSize + 1;
-    
-    for (let i = 0; i < pageSize; i++) {
-        const currentNum = startIndex + i;
-        vods.push({
-            vod_id: currentNum === 1 ? 'searchKeyWord' : `searchKeyWord_${currentNum}`,
-            vod_name: currentNum === 1 ? '点击输入验证码' : `searchKeyWord_${currentNum}`,
-            vod_remarks: `备注_${currentNum}`,
-            vod_year: `年份_${currentNum}`,
-            vod_director: `导演_${currentNum}`
-        });
-    }
-    
-    return {
-        code: 1,
-        msg: "数据列表",
-        list: vods,
-        page: pg,
-        pagecount: totalPages,
-        limit: pageSize,
-        total: totalItems
-		};
-	return true;
-}
 
 /**
  * 搜索
  */
 async function searchContent(key, quick, pg) {
-	// 使用 getSearchCode 获取验证码（预执行时会自动提取并显示弹窗）
-	const result = Java.getSearchCode({
-		site: '剧多多',
-		url: "https://www.ppxhd.cc/index.php/verify/index.html?" + Date.now(),
-		header: {
-			'Referer': baseUrl
-		}
-	});
-	
-	console.log('验证码结果:', result);
-	
-	// 如果用户取消或未输入验证码
-	if (!result || !result.input) {
-		return { list: [] };
-	}
-	
-
-        
-        // 选择1：等待验证码（阻塞当前源站）
-        // var passed = Java.waitCaptchaResult(itemId, 120);
-		// Java.showAlert('取到的验证吗', result.input);
-
-	// console.log("搜索翻页", pg)
-	// let result = Java.showCaptchaEx({
-		// title: '安全验证',
-		// message: '请输入下方图片中的验证码',
-		// imageUrl: 'https://www.jqqzx.top/index.php/verify/index.html?',
-		// headers: { Cookie: 'PHPSESSID=1d91plvokud90usu538h01778i' }
-	// });
-	// if (result.confirmed) {
-		// Java.showAlert('取到的验证吗', result.input);
-	// }
-    // const url = `${baseUrl}/vodsearch${encodeURIComponent(key)}/page/${pg||1}.html`;
-    // const res = await Java.req(url);
+    const searchUrl = `${baseUrl}/vodsearch${key}/page/${pg || 1}.html`;
     
-    // 解析视频列表
-    // const vods = [...res.doc.querySelectorAll('.module-card-item')].map(item => ({
-        // vod_id: baseUrl + item.querySelector('a.module-card-item-poster').getAttribute('href'),
-        // vod_name: item.querySelector('.module-card-item-title strong').textContent.trim(),
-        // vod_pic: item.querySelector('img').getAttribute('data-original'),
-        // vod_remarks: item.querySelector('.module-item-note')?.textContent.trim() || ''
-    // }));
-    
-    // 提取总页数和总数量
-    // const pagecount = parseInt(res.doc.querySelector('#page a[title="尾页"]')?.getAttribute('href')?.match(/page\/(\d+)/)?.[1] || '1');
-    // const total = parseInt(res.doc.querySelector('.mac_total')?.textContent || '0');
-    const vods = [];
-    let pageSize = 2; // 每页显示数量
-	// if(pg >= 2) pageSize= 20;
-    const totalPages = 20; // 总页数
-    const totalItems = pageSize * totalPages; // 总数据量
-    
-    // 计算当前页的起始序号
-    const startIndex = (pg - 1) * pageSize + 1;
-    
-    for (let i = 0; i < pageSize; i++) {
-        const currentNum = startIndex + i;
-        vods.push({
-            vod_id: currentNum === 1 ? 'searchKeyWord' : `searchKeyWord_${currentNum}`,
-            vod_name: currentNum === 1 ? '点击输入验证码' : `searchKeyWord_${currentNum}`,
-            vod_remarks: `备注_${currentNum}`,
-            vod_year: `年份_${currentNum}`,
-            vod_director: `导演_${currentNum}`
+    // 检查是否有验证码需要校验
+    const captcha = Java.getSearchCode();
+    if (captcha && captcha.success) {
+        console.log('使用验证码校验:', captcha.code);
+        console.log('获取到的cookie:', captcha.cookie);
+        const verifyRes = await Java.req(`${baseUrl}/index.php/ajax/verify_check?type=search&verify=${captcha.code}`, {
+            headers: { "Cookie": captcha.cookie }
         });
+        console.log('验证码校验结果:', verifyRes.body);
     }
     
-    // return {
-        // code: 1,
-        // msg: "数据列表",
-        // list: vods,
-        // page: pg,
-        // pagecount: totalPages,
-        // limit: pageSize,
-        // total: totalItems
-		// };
+    // 发起搜索请求
+    const res = await Java.req(searchUrl, {
+        headers: captcha?.cookie ? { "Cookie": captcha.cookie } : {}
+    });
+
+    // 检测是否需要验证码
+    if (!res?.doc?.title?.includes("搜索结果")) {
+        // 需要验证码，返回验证码请求
+        return {
+            SearchCode: true, // 标记需要验证码
+            site: '剧多多',  // 验证码站点标题
+            autoOcr: true,    // 是否自动识别验证码
+            url: `${baseUrl}/index.php/verify/index.html?${Date.now()}`
+        };
+    }
+    
+    const vods = [];
+    res?.doc?.querySelectorAll('.module-card-item').forEach(item => {
+        const link = item.querySelector('.module-card-item-title a');
+        const img = item.querySelector('.module-item-pic img');
+        const desc = item.querySelector('.module-info-item-content');
+        vods.push({
+            vod_id: link?.getAttribute('href') || '',
+            vod_name: link?.textContent?.trim() || '',
+            vod_pic: img?.getAttribute('data-original') || img?.getAttribute('src') || '',
+            vod_remarks: desc?.textContent?.trim() || ''
+        });
+    });
+
+    return {
+        code: 1,
+        msg: "数据列表",
+        list: vods, 
+        page: pg, 
+        pagecount: parseInt(res?.doc?.querySelector("#page > a:nth-child(9)")?.href?.match(/page\/(\d+)/)?.[1] || '1'),
+        limit: 16, 
+        total: parseInt(res?.doc?.querySelector("strong.mac_total")?.textContent || '0')
+    };
 }
 
 /**
  * 播放器
- * 
- * parse 参数说明：
- * - 0: 直接播放 url
- * - 1: 需要解析的 url
- * - 2: 使用自定义嗅探（wvSpider内部嗅探）
  */
 async function playerContent(flag, id, vipFlags) {
     console.log("播放内容:", flag, id);
@@ -322,7 +257,3 @@ function parseDetailPage() {
         vod_play_url: playUrls.join('$$$')
     }];
 }
-
-/* ---------------- 导出对象 ---------------- */
-const spider = { init, homeContent, homeVideoContent, categoryContent, detailContent, searchContent, playerContent, action, onCaptcha };
-spider;
