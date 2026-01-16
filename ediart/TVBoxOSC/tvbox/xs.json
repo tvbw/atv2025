@@ -583,6 +583,13 @@
             "ext": "./XBPQ/韩剧看看.json"
         },
         {
+            "key": "小镇影视",
+            "name": "小镇｜影视",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "ext": "./XBPQ/小镇影视.json"
+        },
+        {
             "key": "面包影视",
             "name": "面包｜影视",
             "type": 3,
@@ -1530,12 +1537,6 @@
             "epg": "https://epg.v1.mk/json?ch={name}&date={date}",
             "logo": "https://epg.v1.mk/logo/{name}.png",
             "timeout": 10
-        },
-        {
-            "name": "IPTV Pro",
-            "url": "https://tv123.cc.cd/iptvpro.txt",
-            "epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
-            "logo": "http://diyp5.112114.xyz/{name}.png"
         },
         {
             "name": "备用直播一",
