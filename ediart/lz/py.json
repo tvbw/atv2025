@@ -11,6 +11,13 @@
 			"changeable": 0
 		},
 		{
+			"key": "独播库_js",
+			"name": "独播库JS",
+			"type": 3,
+			"api": "./js/独播库.js",
+			"changeable": 1
+		},
+		{
 			"key": "apple_js",
 			"name": "小苹果JS",
 			"type": 3,
@@ -557,14 +564,6 @@
 			"url": "https://tv.iill.top/m3u/Gather"
 		},
 		{
-			"name": "易发",
-			"type": 0,
-			"url": "https://down.nigx.cn/raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
-			"epg": "https://epg.v1.mk/json?ch={name}&date={date}",
-			"logo": "https://epg.v1.mk/logo/{name}.png",
-			"timeout": 10
-		},
-		{
 			"name": "YouTube直播",
 			"url": "https://down.nigx.cn/raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/youtubelive.m3u"
 		},
@@ -582,6 +581,14 @@
 			"url": "https://down.nigx.cn/raw.githubusercontent.com/Guovin/iptv-api/refs/heads/master/output/result.txt",
 			"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
 			"logo": "http://diyp5.112114.xyz/{name}.png",
+			"timeout": 10
+		},
+		{
+			"name": "易发+",
+			"type": 0,
+			"url": "https://down.nigx.cn/raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+			"epg": "https://epg.v1.mk/json?ch={name}&date={date}",
+			"logo": "https://epg.v1.mk/logo/{name}.png",
 			"timeout": 10
 		},
 		{
