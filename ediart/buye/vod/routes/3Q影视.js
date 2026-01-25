@@ -1,16 +1,29 @@
+const axios = require("axios");
+const CryptoJS = require("crypto-js");
+
+async function req(url, options = {}) {
+    try {
+        const response = await axios({
+            url: url,
+            method: options.method || 'GET',
+            headers: options.headers || {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36'
+            },
+            data: options.body || null,
+            timeout: options.timeout || 15000,
+        });
+
+        return {
+            content: typeof response.data === 'object' ? JSON.stringify(response.data) : response.data
+        };
+    } catch (error) {
+        console.error(`[请求失败] URL: ${url} | 错误: ${error.message}`);
+        return { content: "{}" };
+    }
+}
+
 let host = 'https://qqqys.com';
-let headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
-    'accept-language': 'zh-CN,zh;q=0.9',
-    'cache-control': 'no-cache',
-    'pragma': 'no-cache',
-};
 
-async function init(cfg) {}
-
-/**
- * 辅助函数：将API返回的视频列表转为标准vod格式
- */
 function json2vods(arr) {
     let videos = [];
     if (!arr) return videos;
@@ -29,9 +42,9 @@ function json2vods(arr) {
     return videos;
 }
 
-async function home(filter) {
+const _home = async ({ filter }) => {
     let url = host + '/api.php/index/home';
-    let resp = await req(url, { headers: headers });
+    let resp = await req(url);
     let json = JSON.parse(resp.content);
     let categories = json.data.categories;
 
@@ -56,13 +69,13 @@ async function home(filter) {
         "动漫": [
             { key: "class", name: "类型", value: [ {n:"全部",v:""}, {n:"冒险",v:"冒险"}, {n:"奇幻",v:"奇幻"}, {n:"科幻",v:"科幻"}, {n:"武侠",v:"武侠"}, {n:"悬疑",v:"悬疑"} ] },
             { key: "area", name: "地区", value: [ {n:"全部",v:""}, {n:"大陆",v:"大陆"}, {n:"日本",v:"日本"}, {n:"欧美",v:"欧美"} ] },
-            { key: "year", name: "年份", value: [ {n:"全部",v:""}, {n:"2026",v:"2026"}, {n:"2025",v:"2025"}, {n:"2024",v:"2024"}, {n:"2023",v:"2023"}, {n:"2022",v:"2022"}, {n:"2021",v:"2021"}, {n:"更早",v:"更早"} ] },
+            { key: "year", name: "年份", value: [ {n:"全部",v:""}, {n:"2026",v:"2026"}, {n:"2025",v:"2025"}, {n:"2024",v:"2024"}, {n:"2023",v:"2023"}, {n:"2022",v:"2022"}, {n:"2021",v:"2021"}, {n:"2020",v:"2020"}, {n:"2019",v:"2019"}, {n:"2018",v:"2018"}, {n:"2017",v:"2017"}, {n:"2016",v:"2016"}, {n:"2015",v:"2015"}, {n:"2014",v:"2014"}, {n:"2013",v:"2013"}, {n:"2012",v:"2012"}, {n:"2011",v:"2011"}, {n:"更早",v:"更早"} ] },
             { key: "sort", name: "排序", value: [ {n:"人气",v:"hits"}, {n:"最新",v:"time"}, {n:"评分",v:"score"}, {n:"年份",v:"year"} ] }
         ],
         "综艺": [
             { key: "class", name: "类型", value: [ {n:"全部",v:""}, {n:"真人秀",v:"真人秀"}, {n:"音乐",v:"音乐"}, {n:"脱口秀",v:"脱口秀"}, {n:"歌舞",v:"歌舞"}, {n:"爱情",v:"爱情"} ] },
             { key: "area", name: "地区", value: [ {n:"全部",v:""}, {n:"大陆",v:"大陆"}, {n:"香港",v:"香港"}, {n:"台湾",v:"台湾"}, {n:"美国",v:"美国"}, {n:"日本",v:"日本"}, {n:"韩国",v:"韩国"} ] },
-            { key: "year", name: "年份", value: [ {n:"全部",v:""}, {n:"2026",v:"2026"}, {n:"2025",v:"2025"}, {n:"2024",v:"2024"}, {n:"2023",v:"2023"}, {n:"2022",v:"2022"}, {n:"2021",v:"2021"}, {n:"更早",v:"更早"} ] },
+            { key: "year", name: "年份", value: [ {n:"全部",v:""}, {n:"2026",v:"2026"}, {n:"2025",v:"2025"}, {n:"2024",v:"2024"}, {n:"2023",v:"2023"}, {n:"2022",v:"2022"}, {n:"2021",v:"2021"}, {n:"2020",v:"2020"}, {n:"2019",v:"2019"}, {n:"2018",v:"2018"}, {n:"2017",v:"2017"}, {n:"2016",v:"2016"}, {n:"2015",v:"2015"}, {n:"2014",v:"2014"}, {n:"2013",v:"2013"}, {n:"2012",v:"2012"}, {n:"2011",v:"2011"}, {n:"更早",v:"更早"} ] },
             { key: "sort", name: "排序", value: [ {n:"人气",v:"hits"}, {n:"最新",v:"time"}, {n:"评分",v:"score"}, {n:"年份",v:"year"} ] }
         ]
     };
@@ -72,39 +85,48 @@ async function home(filter) {
         videos.push(...json2vods(i.videos));
     }
 
-    return JSON.stringify({
-        class: classes,
-        list: videos,
-        filters: filterConfig
-    });
-}
+    return { class: classes, list: videos, filters: filterConfig };
+};
 
-async function category(tid, pg, filter, extend) {
-    let sort = extend.sort || 'hits';
-    let url = `${host}/api.php/filter/vod?type_name=${encodeURIComponent(tid)}&page=${pg}&sort=${sort}`;
-    if (extend.class) url += `&class=${encodeURIComponent(extend.class)}`;
-    if (extend.area) url += `&area=${encodeURIComponent(extend.area)}`;
-    if (extend.year) url += `&year=${encodeURIComponent(extend.year)}`;
+const _category = async ({ id, page, filters }) => {
+    let sort = filters.sort || 'hits';
+    let url = `${host}/api.php/filter/vod?type_name=${encodeURIComponent(id)}&page=${page}&sort=${sort}`;
+    if (filters.class) url += `&class=${encodeURIComponent(filters.class)}`;
+    if (filters.area) url += `&area=${encodeURIComponent(filters.area)}`;
+    if (filters.year) url += `&year=${encodeURIComponent(filters.year)}`;
 
-    let resp = await req(url, { headers: headers });
+    let resp = await req(url);
     let json = JSON.parse(resp.content);
 
-    return JSON.stringify({
+    return {
         list: json2vods(json.data),
-        page: parseInt(pg),
+        page: parseInt(page),
         pagecount: json.pageCount
-    });
-}
+    };
+};
 
-async function detail(id) {
-    let url = `${host}/api.php/vod/get_detail?vod_id=${id}`;
-    let resp = await req(url, { headers: headers });
+const _search = async ({ page, wd }) => {
+    let url = `${host}/api.php/search/index?wd=${encodeURIComponent(wd)}&page=${page}&limit=15`;
+    let resp = await req(url);
+    let json = JSON.parse(resp.content);
+
+    return {
+        list: json2vods(json.data),
+        page: parseInt(page),
+        pagecount: json.pageCount
+    };
+};
+
+const _detail = async ({ id }) => {
+    let vod_id = id[0];
+    let url = `${host}/api.php/vod/get_detail?vod_id=${vod_id}`;
+    let resp = await req(url);
     let json = JSON.parse(resp.content);
     let data = json.data[0];
     let vodplayer = json.vodplayer;
 
-    let aggregateUrl = `${host}/api.php/internal/search_aggregate?vod_id=${id}`;
-    let aggResp = await req(aggregateUrl, { headers: headers });
+    let aggregateUrl = `${host}/api.php/internal/search_aggregate?vod_id=${vod_id}`;
+    let aggResp = await req(aggregateUrl);
     let aggJson = JSON.parse(aggResp.content);
 
     let shows = [];
@@ -166,37 +188,25 @@ async function detail(id) {
         });
     }
 
-    let video = {
-        'vod_id': data.vod_id.toString(),
-        'vod_name': data.vod_name,
-        'vod_pic': data.vod_pic,
-        'vod_remarks': data.vod_remarks,
-        'vod_year': data.vod_year,
-        'vod_area': data.vod_area,
-        'vod_actor': data.vod_actor,
-        'vod_director': data.vod_director,
-        'vod_content': data.vod_content,
-        'vod_play_from': shows.join('$$$'),
-        'vod_play_url': play_urls.join('$$$'),
-        'type_name': data.vod_class
+    return {
+        list: [{
+            'vod_id': data.vod_id.toString(),
+            'vod_name': data.vod_name,
+            'vod_pic': data.vod_pic,
+            'vod_remarks': data.vod_remarks,
+            'vod_year': data.vod_year,
+            'vod_area': data.vod_area,
+            'vod_actor': data.vod_actor,
+            'vod_director': data.vod_director,
+            'vod_content': data.vod_content,
+            'vod_play_from': shows.join('$$$'),
+            'vod_play_url': play_urls.join('$$$'),
+            'type_name': data.vod_class
+        }]
     };
+};
 
-    return JSON.stringify({ list: [video] });
-}
-
-async function search(wd, quick, pg) {
-    let url = `${host}/api.php/search/index?wd=${encodeURIComponent(wd)}&page=${pg}&limit=15`;
-    let resp = await req(url, { headers: headers });
-    let json = JSON.parse(resp.content);
-
-    return JSON.stringify({
-        list: json2vods(json.data),
-        page: parseInt(pg),
-        pagecount: json.pageCount
-    });
-}
-
-async function play(flag, id, flags) {
+const _play = async ({ id }) => {
     let parts = id.split('@');
     let play_from = parts[0], need_parse = parts[1], raw_url = parts[2];
     let jx = 0, final_url = '';
@@ -206,7 +216,7 @@ async function play(flag, id, flags) {
         for (let i = 0; i < 2; i++) {
             try {
                 let apiUrl = `${host}/api.php/decode/url/?url=${encodeURIComponent(raw_url)}&vodFrom=${encodeURIComponent(play_from)}${auth_token}`;
-                let resp = await req(apiUrl, { headers: headers, timeout: 15000 });
+                let resp = await req(apiUrl);
                 let json = JSON.parse(resp.content);
 
                 if (json.code === 2 && json.challenge) {
@@ -229,26 +239,45 @@ async function play(flag, id, flags) {
         if (/(?:www\.iqiyi|v\.qq|v\.youku|www\.mgtv|www\.bilibili)\.com/.test(raw_url)) jx = 1;
     }
 
-    return JSON.stringify({
+    return {
         parse: jx,
         url: final_url,
-        header: { 'User-Agent': headers['User-Agent'] }
-    });
-}
-
-async function homeVod() {
-    return JSON.stringify({ list: [] });
-}
-
-export function __jsEvalReturn() {
-    return {
-        init: init,
-        home: home,
-        homeVod: homeVod,
-        category: category,
-        search: search,
-        detail: detail,
-        play: play
+        header: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' }
     };
-}
+};
 
+const meta = {
+    key: "qqqys",
+    name: "3Q影视",
+    type: 4,
+    api: "/video/qqqys",
+    searchable: 1,
+    quickSearch: 1,
+    changeable: 1,
+};
+
+module.exports = async (app, opt) => {
+    app.get(meta.api, async (req_fastify, reply) => {
+        const { ac, t, pg, wd, play, ids, ext } = req_fastify.query;
+        if (play) {
+            return await _play({ id: play });
+        } else if (wd) {
+            return await _search({ wd, page: pg || "1" });
+        } else if (ac === "detail") {
+            if (t) {
+                let filters = {};
+                if (ext) {
+                    try {
+                        filters = JSON.parse(CryptoJS.enc.Base64.parse(ext).toString(CryptoJS.enc.Utf8));
+                    } catch (e) { console.error("Filter parse error:", e); }
+                }
+                return await _category({ id: t, page: pg || "1", filters });
+            } else if (ids) {
+                return await _detail({ id: ids.split(",").map(i => i.trim()).filter(Boolean) });
+            }
+        } else {
+            return await _home({ filter: true });
+        }
+    });
+    opt.sites.push(meta);
+};
