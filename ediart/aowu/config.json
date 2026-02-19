@@ -303,16 +303,6 @@
 			"changeable": 1
 		},
 		{
-			"name": "🍎苹果|秒播",
-			"key": "Xpg",
-			"type": 3,
-			"api": "csp_XpgAmns",
-			"searchable": 1,
-			"filterable": 1,
-			"quickSearch": 1,
-			"changeable": 1
-		},
-		{
 			"name": "🪁杜北|秒播",
 			"key": "Dubk",
 			"type": 3,
@@ -322,16 +312,6 @@
 			"quickSearch": 1,
 			"changeable": 1,
 			"ext": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/dubk.json"
-		},
-		{
-			"name": "👀注视|2K",
-			"key": "Gaze",
-			"type": 3,
-			"api": "csp_GazeAmns",
-			"searchable": 1,
-			"filterable": 1,
-			"quickSearch": 1,
-			"changeable": 1
 		},
 		{
 			"name": "🏆高端|2K",
@@ -545,7 +525,7 @@
 		},
 		{
 			"name": "🛴推送|播放",
-			"key": "Push",
+			"key": "push_agent",
 			"type": 3,
 			"api": "csp_PushAmns",
 			"searchable": 0,

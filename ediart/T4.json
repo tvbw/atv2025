@@ -401,14 +401,8 @@
 			"ua": "bingcha/1.1 (mianfeifenxiang) "
 		},
 		{
-			"name": "央视频",
-			"url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/ysp.txt",
-			"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
-			"logo": "http://diyp5.112114.xyz/{name}.png"
-		},
-		{
-			"name": "央视卫视",
-			"url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/ysws.txt",
+			"name": "华视央卫",
+			"url": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/TVBoxOSC/tvbox/hsyw.txt",
 			"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
 			"logo": "http://diyp5.112114.xyz/{name}.png"
 		},
@@ -481,6 +475,10 @@
 			"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
 			"logo": "http://diyp5.112114.xyz/{name}.png",
 			"timeout": 10
+		},
+		{
+			"name": "Lonely+",
+			"url": "https://xoxo.cn.mt/Lonely.m3u"
 		},
 		{
 			"name": "易发+",
