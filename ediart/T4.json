@@ -1,83 +1,72 @@
 {
 	"wallpaper": "https://深色壁纸.xxooo.cf/",
 	"sites": [{
-			"api": "https://newtv.ggff.net/douban?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/douban?token=NtKuzkIw",
 			"indexs": 0,
 			"key": "豆瓣首页",
 			"name": "豆瓣首页",
+			"searchable": 0,
 			"type": 4
 		},
 		{
-			"key": "zhuanxiang",
-			"name": "专享4K",
-			"type": 4,
-			"api": "http://sspa8.top:99/php/%E4%B8%93%E4%BA%AB.php"
-		},
-		{
-			"api": "https://newtv.ggff.net/guazi?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/guazi?token=NtKuzkIw",
 			"key": "月佬瓜子影视",
 			"name": "月佬瓜子影视",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/uvod?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/uvod?token=NtKuzkIw",
 			"key": "Qile优视频",
 			"name": "Qile优视频",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/aigua?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/aigua?token=NtKuzkIw",
 			"key": "嗷呜爱瓜TV",
 			"name": "嗷呜爱瓜TV",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/pingguo?token=dt7oO7x4",
-			"key": "嗷呜小苹果",
-			"name": "嗷呜小苹果",
-			"type": 4
-		},
-		{
-			"api": "https://newtv.ggff.net/duboku?token=dt7oO7x4",
-			"key": "独播库",
-			"name": "独播库",
-			"type": 4
-		},
-		{
-			"api": "https://newtv.ggff.net/oule?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/oule?token=NtKuzkIw",
 			"key": "欧乐影院",
 			"name": "欧乐影院",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/jianpian?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/jianpian?token=NtKuzkIw",
 			"key": "荐片",
 			"name": "荐片",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/jubaba?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/jubaba?token=NtKuzkIw",
 			"key": "嗷呜剧爸爸",
 			"name": "嗷呜剧爸爸",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/yongle?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/yongle?token=NtKuzkIw",
 			"key": "恰逢永乐",
 			"name": "恰逢永乐",
 			"type": 4
 		},
 		{
-			"api": "https://newtv.ggff.net/ikanbot?token=dt7oO7x4",
+			"api": "https://newtv.ggff.net/duboku?token=NtKuzkIw",
+			"key": "独播库",
+			"name": "独播库",
+			"type": 4
+		},
+		{
+			"api": "https://newtv.ggff.net/ikanbot?token=NtKuzkIw",
 			"key": "爱看机器人",
 			"name": "爱看机器人",
 			"type": 4
 		},
 		{
-			"key": "py_小苹果",
-			"name": "小苹果M",
-			"type": 4,
-			"api": "https://py.doube.eu.org/v2/spider?site=9037cfae7c64405111e0e364401adb60"
+			"api": "https://newtv.ggff.net/kanqiu?token=NtKuzkIw",
+			"key": "Qile看球",
+			"name": "Qile看球",
+			"type": 4
 		},
 		{
 			"key": "py_官方采集789",
